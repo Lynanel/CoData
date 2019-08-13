@@ -46,13 +46,18 @@ class CoreDataHelper {
         
         do{
             let listes = try context.fetch(fectRequest)
-            for l in listes {
-                print(l.name!)
-            }
             completion?(listes)
-            
         } catch {
             completion?(nil)
+            print(error.localizedDescription)
+        }
+    }
+    
+    func deleteListe(_ liste: Liste) {
+        context.delete(liste)
+        do{
+            try context.save()
+        } catch {
             print(error.localizedDescription)
         }
     }

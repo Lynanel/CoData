@@ -10,7 +10,6 @@ import UIKit
 
 class ListeCell: UITableViewCell {
 
-    
     @IBOutlet weak var nameLBL: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
     
