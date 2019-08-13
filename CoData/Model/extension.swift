@@ -13,8 +13,16 @@ extension Date {
     func toString() -> String {
         
         let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .short
+        let calendar = Calendar.current
+        if calendar.isDateInToday(self){
+            formatter.dateStyle = .none
+            formatter.timeStyle = .short
+        } else {
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .none
+        }
+       
+        
         formatter.locale = Locale(identifier: "fr_FR")
         return formatter.string(from: self)
     }
