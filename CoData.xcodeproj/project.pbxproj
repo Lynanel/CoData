@@ -14,6 +14,7 @@
 		E2BAEF6323024B1700DA79E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BAEF6223024B1700DA79E8 /* Assets.xcassets */; };
 		E2BAEF6623024B1700DA79E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2BAEF6423024B1700DA79E8 /* LaunchScreen.storyboard */; };
 		E2BAEF6F2302523200DA79E8 /* MaTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BAEF6E2302523200DA79E8 /* MaTabBar.swift */; };
+		E2BAEF7523025A4200DA79E8 /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BAEF7423025A4200DA79E8 /* CoreDataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E2BAEF6523024B1700DA79E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2BAEF6723024B1700DA79E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2BAEF6E2302523200DA79E8 /* MaTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaTabBar.swift; sourceTree = "<group>"; };
+		E2BAEF7423025A4200DA79E8 /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				E2BAEF5F23024B1600DA79E8 /* CoData.xcdatamodeld */,
+				E2BAEF7423025A4200DA79E8 /* CoreDataHelper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2BAEF7523025A4200DA79E8 /* CoreDataHelper.swift in Sources */,
 				E2BAEF5B23024B1600DA79E8 /* ListeController.swift in Sources */,
 				E2BAEF5923024B1600DA79E8 /* AppDelegate.swift in Sources */,
 				E2BAEF6123024B1600DA79E8 /* CoData.xcdatamodeld in Sources */,

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ListeController: UIViewController {
     
@@ -21,7 +22,7 @@ class ListeController: UIViewController {
     }
 
     @IBAction func addListe(_ sender: UIButton) {
-        
+        CoreDataHelper().saveListe(naleTF.text)
     }
 
 }
