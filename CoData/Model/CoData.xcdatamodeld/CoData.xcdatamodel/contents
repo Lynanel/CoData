@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14492.1" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Articles" representedClassName="Articles" syncable="YES" codeGenerationType="class">
+        <attribute name="dateArt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="imageArt" optional="YES" attributeType="Transformable" syncable="YES"/>
         <attribute name="nameArt" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="prixArt" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -14,6 +15,6 @@
     </entity>
     <elements>
         <element name="Liste" positionX="-63" positionY="-18" width="128" height="88"/>
-        <element name="Articles" positionX="-429.1015625" positionY="47.828125" width="128" height="120"/>
+        <element name="Articles" positionX="-429.1015625" positionY="47.828125" width="128" height="133"/>
     </elements>
 </model>

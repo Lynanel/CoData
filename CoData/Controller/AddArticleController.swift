@@ -49,6 +49,8 @@ class AddArticleController: UIViewController {
     
     @IBAction func addArticleAction(_ sender: Any) {
         view.endEditing(true)
+        CoreDataHelper().saveArticle(name: nameTF.text, shop: shopTF.text, prix: prixTF.text, image: imageView.image, liste: liste)
+        navigationController?.popViewController(animated: true)
     }
     
     
