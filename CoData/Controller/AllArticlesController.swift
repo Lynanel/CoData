@@ -57,7 +57,20 @@ class AllArticlesController: UIViewController, UITableViewDelegate, UITableViewD
 extension AllArticlesController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        //<#code#>
+        if searchText == "" {
+            isSearching = false
+            tableView.reloadData()
+        } else {
+            isSearching = true
+            CoreDataHelper().queryArticles(string: searchText) { (Articles) in
+                if Articles != nil {
+                    DispatchQueue.main.async {
+                        self.queryArticle = Articles!
+                        self.tableView.reloadData()
+                    }
+                }
+            }
+        }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

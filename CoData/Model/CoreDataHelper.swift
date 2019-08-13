@@ -22,7 +22,6 @@ class CoreDataHelper {
         return appDel.persistentContainer.viewContext
     }
     
-    
     //Sauvegarder dans CoreDate
     func save() {
         appDel.saveContext()
@@ -93,6 +92,23 @@ class CoreDataHelper {
             print(error.localizedDescription)
         }
     }
+    
+    func queryArticles(string: String, completion: ArticleCompletion?){
+        let fetchRequest: NSFetchRequest<Articles> = Articles.fetchRequest()
+        let sort = NSSortDescriptor(key:"nameArt", ascending: true)
+        let predicate = NSPredicate(format: "nameArt contains[c]%@", string)
+        fetchRequest.sortDescriptors = [sort]
+        fetchRequest.predicate = predicate
+        
+        do {
+            let articles = try context.fetch(fetchRequest)
+            completion?(articles)
+        } catch {
+            print(error.localizedDescription)
+            completion?(nil)
+        }
+    }
+    
     
     func deleteArticle(_ article: Articles) {
         context.delete(article)
