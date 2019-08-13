@@ -13,7 +13,7 @@
         <!--Article-->
         <scene sceneID="SF8-Ck-UGF">
             <objects>
-                <viewController id="j7N-Fi-hLR" sceneMemberID="viewController">
+                <viewController id="j7N-Fi-hLR" customClass="AllArticlesController" customModule="CoData" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L4d-Oi-cx5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,10 +82,10 @@
                                     <constraint firstItem="Dfh-VQ-psQ" firstAttribute="top" secondItem="QUB-Dq-j68" secondAttribute="top" constant="8" id="9Rg-9U-v5V"/>
                                     <constraint firstItem="Dfh-VQ-psQ" firstAttribute="leading" secondItem="Rwl-fx-hvI" secondAttribute="trailing" constant="8" id="MC0-5e-Jsc"/>
                                     <constraint firstAttribute="trailing" secondItem="Dfh-VQ-psQ" secondAttribute="trailing" constant="8" id="V82-nZ-wFb"/>
-                                    <constraint firstItem="Rwl-fx-hvI" firstAttribute="centerY" secondItem="QUB-Dq-j68" secondAttribute="centerY" id="YC9-Kx-iQx"/>
+                                    <constraint firstItem="Rwl-fx-hvI" firstAttribute="centerY" secondItem="QUB-Dq-j68" secondAttribute="centerY" identifier="Centre" id="YC9-Kx-iQx"/>
                                     <constraint firstAttribute="height" constant="75" id="eW8-3H-gb8"/>
-                                    <constraint firstAttribute="bottom" secondItem="Dfh-VQ-psQ" secondAttribute="bottom" constant="8" id="rtT-Ir-UfJ"/>
-                                    <constraint firstItem="Rwl-fx-hvI" firstAttribute="leading" secondItem="QUB-Dq-j68" secondAttribute="leading" constant="8" id="scZ-1M-0Jn"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dfh-VQ-psQ" secondAttribute="bottom" constant="8" identifier="Bas" id="rtT-Ir-UfJ"/>
+                                    <constraint firstItem="Rwl-fx-hvI" firstAttribute="leading" secondItem="QUB-Dq-j68" secondAttribute="leading" constant="8" identifier="Gauche" id="scZ-1M-0Jn"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-yu-nTm">
@@ -169,11 +169,74 @@
                         <outlet property="holderView" destination="QUB-Dq-j68" id="cK7-M5-UZl"/>
                         <outlet property="naleTF" destination="Rwl-fx-hvI" id="HKQ-zh-mGQ"/>
                         <outlet property="tableView" destination="fdq-yu-nTm" id="tsi-I6-IX1"/>
+                        <segue destination="cSW-0m-iRk" kind="show" identifier="Article" id="HXD-WN-hfs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUz-wF-gAV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1821.7391304347827" y="-467.41071428571428"/>
+        </scene>
+        <!--Article Controller-->
+        <scene sceneID="qTW-lu-QSQ">
+            <objects>
+                <viewController id="cSW-0m-iRk" customClass="ArticleController" customModule="CoData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="53a-Fl-Pos">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="ril-fA-IKh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ril-fA-IKh" firstAttribute="trailing" secondItem="hsf-NA-mn8" secondAttribute="trailing" id="INS-Th-1zo"/>
+                            <constraint firstItem="ril-fA-IKh" firstAttribute="leading" secondItem="hsf-NA-mn8" secondAttribute="leading" id="Q0r-2d-Hey"/>
+                            <constraint firstAttribute="bottom" secondItem="ril-fA-IKh" secondAttribute="bottom" id="cNZ-GU-Jeq"/>
+                            <constraint firstItem="ril-fA-IKh" firstAttribute="top" secondItem="53a-Fl-Pos" secondAttribute="top" id="cS5-gm-73n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hsf-NA-mn8"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rj1-Az-QAQ">
+                        <barButtonItem key="rightBarButtonItem" title="Ajouter" id="Zxx-Cn-WMu">
+                            <connections>
+                                <action selector="add:" destination="cSW-0m-iRk" id="z8k-5U-PJu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="did-3q-9BL" kind="show" identifier="Add" id="51E-kd-55w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zHq-dj-VRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2571.0144927536235" y="-470.08928571428567"/>
+        </scene>
+        <!--Add Article Controller-->
+        <scene sceneID="KUS-dI-DCH">
+            <objects>
+                <viewController id="did-3q-9BL" customClass="AddArticleController" customModule="CoData" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vsj-ZR-oyC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="WbH-cA-7Mt">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WbH-cA-7Mt" firstAttribute="trailing" secondItem="cm4-cR-H6M" secondAttribute="trailing" id="1vz-K8-CFY"/>
+                            <constraint firstItem="WbH-cA-7Mt" firstAttribute="leading" secondItem="cm4-cR-H6M" secondAttribute="leading" id="52h-0x-XWB"/>
+                            <constraint firstItem="WbH-cA-7Mt" firstAttribute="top" secondItem="vsj-ZR-oyC" secondAttribute="top" id="I3H-oP-nG1"/>
+                            <constraint firstAttribute="bottom" secondItem="WbH-cA-7Mt" secondAttribute="bottom" id="RzK-r2-hlT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cm4-cR-H6M"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQe-hg-emQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3379.7101449275365" y="-467.41071428571428"/>
         </scene>
         <!--Ma Tab Bar-->
         <scene sceneID="Fq3-ex-lYk">

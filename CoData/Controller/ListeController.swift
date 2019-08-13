@@ -36,6 +36,12 @@ class ListeController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "Article", let controller = segue.destination as? ArticleController {
+            controller.liste = sender as? Liste
+        }
+    }
 
     @IBAction func addListe(_ sender: UIButton) {
         view.endEditing(true)
@@ -76,6 +82,10 @@ extension ListeController: UITableViewDelegate, UITableViewDataSource {
             CoreDataHelper().deleteListe(listeASuprimer)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "Article", sender: listes[indexPath.row])
     }
 }
 
