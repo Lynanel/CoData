@@ -17,7 +17,6 @@ extension Date {
         formatter.timeStyle = .short
         formatter.locale = Locale(identifier: "fr_FR")
         return formatter.string(from: self)
-    
     }
     
 }
