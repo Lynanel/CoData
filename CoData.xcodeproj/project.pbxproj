@@ -13,6 +13,7 @@
 		E2BAEF6123024B1600DA79E8 /* CoData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2BAEF5F23024B1600DA79E8 /* CoData.xcdatamodeld */; };
 		E2BAEF6323024B1700DA79E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2BAEF6223024B1700DA79E8 /* Assets.xcassets */; };
 		E2BAEF6623024B1700DA79E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2BAEF6423024B1700DA79E8 /* LaunchScreen.storyboard */; };
+		E2BAEF6F2302523200DA79E8 /* MaTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BAEF6E2302523200DA79E8 /* MaTabBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E2BAEF6223024B1700DA79E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2BAEF6523024B1700DA79E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2BAEF6723024B1700DA79E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2BAEF6E2302523200DA79E8 /* MaTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaTabBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		E2BAEF5723024B1600DA79E8 /* CoData */ = {
 			isa = PBXGroup;
 			children = (
+				E2BAEF6D230251EC00DA79E8 /* Controller */,
 				E2BAEF5823024B1600DA79E8 /* AppDelegate.swift */,
 				E2BAEF5A23024B1600DA79E8 /* ViewController.swift */,
 				E2BAEF5C23024B1600DA79E8 /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				E2BAEF5F23024B1600DA79E8 /* CoData.xcdatamodeld */,
 			);
 			path = CoData;
+			sourceTree = "<group>";
+		};
+		E2BAEF6D230251EC00DA79E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E2BAEF6E2302523200DA79E8 /* MaTabBar.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 				E2BAEF5B23024B1600DA79E8 /* ViewController.swift in Sources */,
 				E2BAEF5923024B1600DA79E8 /* AppDelegate.swift in Sources */,
 				E2BAEF6123024B1600DA79E8 /* CoData.xcdatamodeld in Sources */,
+				E2BAEF6F2302523200DA79E8 /* MaTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
