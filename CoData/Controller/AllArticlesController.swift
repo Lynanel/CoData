@@ -29,7 +29,26 @@ class AllArticlesController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.register(nib, forCellReuseIdentifier: articleCell)
         
         searchBar.delegate = self
+        
+        //
+        NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Notification.Name("delete"), object: nil)
 
+    }
+    @objc func reload(){
+        CoreDataHelper().allArticles(completion: { (Articles) in
+            if Articles != nil {
+                DispatchQueue.main.async {
+                    self.allArticles = Articles!
+                    self.tableView.reloadData()
+                }
+            }
+        })
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reload()
     }
     
 }

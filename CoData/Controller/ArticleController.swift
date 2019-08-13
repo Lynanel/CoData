@@ -18,8 +18,8 @@ class ArticleController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView!.delegate = self as? UITableViewDelegate
-        tableView!.dataSource = self as? UITableViewDataSource
+        tableView!.delegate = self
+        tableView!.dataSource = self
         
         let nib = UINib(nibName: articleCell, bundle: nil)
         tableView?.register(nib, forCellReuseIdentifier: articleCell)

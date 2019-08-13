@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 
 typealias ListeCompletion = (_ liste: [Liste]?) -> Void
+typealias ArticleCompletion = (_ articles: [Articles]?) -> Void
 
 class CoreDataHelper {
     
@@ -79,6 +80,18 @@ class CoreDataHelper {
         }
         new.liste = liste
         save()
+    }
+    
+    func allArticles(completion: ArticleCompletion?){
+        let request: NSFetchRequest<Articles> = Articles.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "nameArt", ascending: true)
+        request.sortDescriptors = [sortDescriptor]
+        do {
+            let articles = try context.fetch(request)
+            completion?(articles)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func deleteArticle(_ article: Articles) {

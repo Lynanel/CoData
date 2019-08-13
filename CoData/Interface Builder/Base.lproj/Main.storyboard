@@ -263,7 +263,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajouter un article" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="14U-C8-nDd">
-                                                <rect key="frame" x="10" y="10" width="208" height="50"/>
+                                                <rect key="frame" x="10" y="10" width="394" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="fyL-cv-c7R"/>
                                                 </constraints>
@@ -313,6 +313,7 @@
                                             <constraint firstAttribute="trailing" secondItem="c01-8h-1Rt" secondAttribute="trailing" constant="8" id="SCl-Fd-lTW"/>
                                             <constraint firstItem="KtC-Hv-yil" firstAttribute="trailing" secondItem="c01-8h-1Rt" secondAttribute="trailing" id="T4l-kU-8JI"/>
                                             <constraint firstItem="Cvy-Z3-RDZ" firstAttribute="top" secondItem="14U-C8-nDd" secondAttribute="bottom" constant="10" id="Xhu-zN-7If"/>
+                                            <constraint firstItem="14U-C8-nDd" firstAttribute="centerX" secondItem="lI0-2s-3QS" secondAttribute="centerX" id="ZJK-DH-FJP"/>
                                             <constraint firstItem="c01-8h-1Rt" firstAttribute="top" secondItem="Cvy-Z3-RDZ" secondAttribute="top" id="cp7-85-lyz"/>
                                             <constraint firstAttribute="trailing" secondItem="c01-8h-1Rt" secondAttribute="trailing" constant="8" id="d5a-aX-MWe"/>
                                             <constraint firstItem="Cvy-Z3-RDZ" firstAttribute="leading" secondItem="lI0-2s-3QS" secondAttribute="leading" constant="8" id="gcD-bG-cHy"/>
