@@ -8,6 +8,9 @@
 
 import UIKit
 import CoreData
+
+typealias ListeCompletion = (_ liste: [Liste]?) -> Void
+
 class CoreDataHelper {
     
     //Récupérer base CoreData
@@ -33,6 +36,25 @@ class CoreDataHelper {
         
         //Enregistrement des données de façon persitentes
         save()
+    }
+    
+    func getListe(completion: ListeCompletion?) {
+        
+        let fectRequest: NSFetchRequest<Liste> = Liste.fetchRequest()
+        let sortDEscriptor = NSSortDescriptor(key: "date", ascending: true)
+        fectRequest.sortDescriptors = [sortDEscriptor]
+        
+        do{
+            let listes = try context.fetch(fectRequest)
+            for l in listes {
+                print(l.name!)
+            }
+            completion?(listes)
+            
+        } catch {
+            completion?(nil)
+            print(error.localizedDescription)
+        }
     }
     
 }

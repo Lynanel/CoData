@@ -15,14 +15,27 @@ class ListeController: UIViewController {
     @IBOutlet weak var holderView: UIView!
     @IBOutlet weak var naleTF: UITextField!
     
+    var listes:[Liste] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateListe()
+    }
+    
+    func updateListe(){
+        CoreDataHelper().getListe{ (listes) in
+            if listes != nil {
+                DispatchQueue.main.async {
+                    self.listes = listes!
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
     @IBAction func addListe(_ sender: UIButton) {
         CoreDataHelper().saveListe(naleTF.text)
+        updateListe()
     }
 
 }
