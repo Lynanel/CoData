@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E235DC482302AF8B0025F2B7 /* ListeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235DC472302AF8B0025F2B7 /* ListeCell.swift */; };
+		E235DC4A2302AFBA0025F2B7 /* ViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E235DC492302AFBA0025F2B7 /* ViewShadow.swift */; };
 		E2BAEF5923024B1600DA79E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BAEF5823024B1600DA79E8 /* AppDelegate.swift */; };
 		E2BAEF5B23024B1600DA79E8 /* ListeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BAEF5A23024B1600DA79E8 /* ListeController.swift */; };
 		E2BAEF5E23024B1600DA79E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2BAEF5C23024B1600DA79E8 /* Main.storyboard */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E235DC472302AF8B0025F2B7 /* ListeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeCell.swift; sourceTree = "<group>"; };
+		E235DC492302AFBA0025F2B7 /* ViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShadow.swift; sourceTree = "<group>"; };
 		E2BAEF5523024B1600DA79E8 /* CoData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2BAEF5823024B1600DA79E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E2BAEF5A23024B1600DA79E8 /* ListeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListeController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 		E2BAEF712302541C00DA79E8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E235DC472302AF8B0025F2B7 /* ListeCell.swift */,
+				E235DC492302AFBA0025F2B7 /* ViewShadow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -177,6 +183,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E2BAEF7523025A4200DA79E8 /* CoreDataHelper.swift in Sources */,
+				E235DC482302AF8B0025F2B7 /* ListeCell.swift in Sources */,
+				E235DC4A2302AFBA0025F2B7 /* ViewShadow.swift in Sources */,
 				E2BAEF5B23024B1600DA79E8 /* ListeController.swift in Sources */,
 				E2BAEF5923024B1600DA79E8 /* AppDelegate.swift in Sources */,
 				E2BAEF6123024B1600DA79E8 /* CoData.xcdatamodeld in Sources */,

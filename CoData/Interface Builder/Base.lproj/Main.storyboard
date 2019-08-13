@@ -48,7 +48,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="R3K-Go-2Fr">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUB-Dq-j68">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUB-Dq-j68" customClass="ViewShadow" customModule="CoData" customModuleProvider="target">
                                 <rect key="frame" x="10" y="96" width="394" height="75"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Entrez une liste" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rwl-fx-hvI">
@@ -92,6 +92,61 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fdq-yu-nTm">
                                 <rect key="frame" x="10" y="179" width="394" height="642"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListeCell" rowHeight="81" id="ptc-YW-5nT" customClass="ListeCell" customModule="CoData" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="81"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ptc-YW-5nT" id="HBS-Ih-kcY">
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="80.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mm1-am-7cl">
+                                                    <rect key="frame" x="0.0" y="5" width="394" height="70.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4d5-uN-QMg">
+                                                            <rect key="frame" x="5" y="0.0" width="389" height="24"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="NKP-7d-3nd">
+                                                            <rect key="frame" x="0.0" y="30.5" width="394" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="BVy-w9-wta"/>
+                                                                <constraint firstAttribute="height" constant="40" id="nL3-xs-7xY"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="22"/>
+                                                            <color key="textColor" red="1" green="0.26907231300000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="NKP-7d-3nd" secondAttribute="trailing" id="KyJ-hU-7im"/>
+                                                        <constraint firstItem="4d5-uN-QMg" firstAttribute="top" secondItem="Mm1-am-7cl" secondAttribute="top" id="SFc-6Y-tuz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4d5-uN-QMg" secondAttribute="trailing" id="geM-fh-FRW"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NKP-7d-3nd" secondAttribute="bottom" id="i5i-nc-irR"/>
+                                                        <constraint firstItem="4d5-uN-QMg" firstAttribute="leading" secondItem="Mm1-am-7cl" secondAttribute="leading" constant="5" id="ihr-js-qH2"/>
+                                                        <constraint firstItem="NKP-7d-3nd" firstAttribute="leading" secondItem="Mm1-am-7cl" secondAttribute="leading" id="pDT-HR-41F"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Mm1-am-7cl" secondAttribute="bottom" constant="5" id="6Kt-SH-NlQ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mm1-am-7cl" secondAttribute="trailing" id="JcM-uW-hiJ"/>
+                                                <constraint firstItem="Mm1-am-7cl" firstAttribute="top" secondItem="HBS-Ih-kcY" secondAttribute="top" constant="5" id="UgC-rA-nvh"/>
+                                                <constraint firstItem="Mm1-am-7cl" firstAttribute="leading" secondItem="HBS-Ih-kcY" secondAttribute="leading" id="ynl-lO-aZg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="ListeCell" destination="NKP-7d-3nd" id="ven-xW-Va1"/>
+                                            <outlet property="dateLbl" destination="4d5-uN-QMg" id="1dl-Zu-rOQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
