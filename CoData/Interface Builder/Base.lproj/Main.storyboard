@@ -240,14 +240,14 @@
                                                 <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Cvy-Z3-RDZ">
-                                                <rect key="frame" x="8" y="70" width="324" height="250.00000000000011"/>
+                                                <rect key="frame" x="8" y="70" width="16" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="250" id="Wwa-H6-OiG"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="aNz-tl-GRu"/>
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c01-8h-1Rt">
-                                                <rect key="frame" x="342" y="70" width="64" height="50"/>
+                                                <rect key="frame" x="34" y="70" width="372" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="MHn-3v-emH"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="MiN-kr-j0f"/>
@@ -262,7 +262,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KtC-Hv-yil">
-                                                <rect key="frame" x="342" y="270" width="64" height="50"/>
+                                                <rect key="frame" x="34" y="270" width="372" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="D33-sv-geY"/>
                                                 </constraints>
@@ -374,6 +374,7 @@
                     </view>
                     <connections>
                         <outlet property="imageIV" destination="lI0-2s-3QS" id="ZMC-Mt-Dk7"/>
+                        <outlet property="imageView" destination="Cvy-Z3-RDZ" id="VxA-El-owN"/>
                         <outlet property="nameTF" destination="gkR-YN-t1d" id="eKp-ca-45s"/>
                         <outlet property="shopTF" destination="czX-eF-WW3" id="YTA-CR-Rcy"/>
                     </connections>
