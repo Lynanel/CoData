@@ -21,17 +21,40 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="FXv-7R-lAt">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="QqC-6U-8xc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CBN-NG-3sk"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ElA-Ol-1ea">
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="QqC-6U-8xc" firstAttribute="leading" secondItem="ie8-qf-sWW" secondAttribute="leading" id="1UG-Wc-FeR"/>
+                            <constraint firstItem="QqC-6U-8xc" firstAttribute="trailing" secondItem="ie8-qf-sWW" secondAttribute="trailing" id="5gI-tZ-TF5"/>
                             <constraint firstAttribute="bottom" secondItem="FXv-7R-lAt" secondAttribute="bottom" id="71m-cb-QcV"/>
+                            <constraint firstAttribute="bottom" secondItem="ElA-Ol-1ea" secondAttribute="bottom" id="95z-5i-egR"/>
+                            <constraint firstItem="ElA-Ol-1ea" firstAttribute="trailing" secondItem="ie8-qf-sWW" secondAttribute="trailing" id="Guf-3i-a0V"/>
                             <constraint firstItem="FXv-7R-lAt" firstAttribute="trailing" secondItem="ie8-qf-sWW" secondAttribute="trailing" id="MQC-kX-fZf"/>
+                            <constraint firstItem="ElA-Ol-1ea" firstAttribute="top" secondItem="QqC-6U-8xc" secondAttribute="bottom" id="OLi-S6-5pR"/>
                             <constraint firstItem="FXv-7R-lAt" firstAttribute="leading" secondItem="ie8-qf-sWW" secondAttribute="leading" id="ZQy-DI-wyi"/>
+                            <constraint firstItem="QqC-6U-8xc" firstAttribute="top" secondItem="ie8-qf-sWW" secondAttribute="top" id="b2v-Gv-Joe"/>
                             <constraint firstItem="FXv-7R-lAt" firstAttribute="top" secondItem="L4d-Oi-cx5" secondAttribute="top" id="opp-Da-jpF"/>
+                            <constraint firstItem="ElA-Ol-1ea" firstAttribute="leading" secondItem="ie8-qf-sWW" secondAttribute="leading" id="wh8-Jv-9LS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ie8-qf-sWW"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Article" image="article" id="8C6-4a-LJq"/>
+                    <connections>
+                        <outlet property="searchBar" destination="QqC-6U-8xc" id="mDm-wd-T1S"/>
+                        <outlet property="tableView" destination="ElA-Ol-1ea" id="0Ld-eA-qxl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QRX-YC-fGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
