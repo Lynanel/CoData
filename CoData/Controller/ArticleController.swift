@@ -27,14 +27,14 @@ class ArticleController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(reload), name: Notification.Name("delete"), object: nil)
     }
     
-    @objc func ßreload(){
+    @objc func reload(){
     if let articles = liste.article?.allObjects as? [Articles] {
         self.articles = articles
         self.tableView!.reloadData()
     }
     
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         reload()
