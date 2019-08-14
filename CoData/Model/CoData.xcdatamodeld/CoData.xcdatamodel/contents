@@ -14,7 +14,7 @@
         <relationship name="article" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Articles" inverseName="liste" inverseEntity="Articles" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Liste" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="Articles" positionX="-429.1015625" positionY="47.828125" width="128" height="133"/>
+        <element name="Liste" positionX="-63" positionY="-18" width="128" height="90"/>
     </elements>
 </model>

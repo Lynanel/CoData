@@ -34,14 +34,14 @@ class AddArticleController: UIViewController {
     }
     
     @objc func hideKey(notification: Notification){
-        UIView.animate(withDuration: 0.35) {
+        UIView.animate(withDuration: 0.15) {
             self.bottonScroll.constant = 0
         }
     }
     
     @objc func showKey(notification: Notification){
         if let height = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height {
-            UIView.animate(withDuration: 0.35){
+            UIView.animate(withDuration: 0.15){
                 self.bottonScroll.constant = -height
             }
         }
